@@ -38,11 +38,11 @@ export default function Home({ }) {
 
 
     return (
-        <div>
-            <h1>Customers</h1>
-            <ul>
+        <div style={{ margin: '20px', padding: '20px'}}>
+            <h1 style={{marginBottom: '15px'}}>Customers</h1>
+            <ul style={{listStyle: 'none', cursor: 'pointer'}}>
                 {customers ? customers.map((customer, index) => (
-                    <li key={index} onClick={() => setSelectedCustomer(customer)}>
+                    <li style={{padding: '4px'}} key={index} onClick={() => setSelectedCustomer(customer)}>
                         {customer.name}
                     </li>
                 )) : "Loading"}
